@@ -16,16 +16,32 @@
 
 
 
+// function restoreString(s: string, indices: number[]): string {
+//     let resultArr:string[] = [];
+//     let resultStr:string = '';
+//     for (let i = 0; i < indices.length; i++) {
+//         let temp = indices[i];
+//         resultArr[temp] = s[i];
+//     }
+//     for (let i = 0; i < indices.length; i++) {
+//         resultStr += resultArr[i];
+//     }
+//     return resultStr;
+// };
+// console.log(restoreString("codeleet",[4,5,6,7,0,2,1,3]))
+
+
+
+
+
+
 function restoreString(s: string, indices: number[]): string {
-    let resultArr:string[] = [];
     let resultStr:string = '';
+
     for (let i = 0; i < indices.length; i++) {
-        let temp = indices[i];
-        resultArr[temp] = s[i];
+        resultStr += s.charAt(indices[i]);
     }
-    for (let i = 0; i < indices.length; i++) {
-        resultStr += resultArr[i];
-    }
+
     return resultStr;
 };
 console.log(restoreString("codeleet",[4,5,6,7,0,2,1,3]))
